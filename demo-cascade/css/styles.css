@@ -1,0 +1,124 @@
+footer{
+    background-color: #333333;
+    color: yellow;
+}
+/*
+    We can specify multiple selectors seperated by commas for a single declaration
+*/
+
+/********************************************
+    Make a specific class with your css rules
+
+    .nav-background{
+    background-color: #ddd;
+} 
+
+/********************************************/
+
+/*
+    Decendant selector - Use descendant selectors to be more precise; 
+    the following rule applies to any ul elements that are descendants of nav elements
+*/
+
+nav ul{
+    background-color: #dddddd;
+}
+
+/*
+    Specificity:
+        It is a value assigned to the selector depending on metting different criteria
+
+    Selector type
+    Element selector gets a value of 1
+    Class selector gets a value of 10
+    Id selector gets a value of 100
+    SPECIAL NOTE: ALL inline styling gets a value of 1000
+
+    Specificity decission are based on the value of the selector
+
+    If the specificity of the conflicting rules is the same then 
+        "The last coded rules wins"
+*/
+
+/*
+    We can specify any number of descendants; the following rule applies to any li elements
+    that are descendants
+*/
+footer,
+footer a {
+    color: white;
+}
+
+/********************************************
+    First set elements select li to a border-bottom
+
+    concern: BOTH nav and footer were affected
+
+    solutions: 
+        a) Use a descendant selector (nav li > li)
+        b) Use a class selector (li-border > li) 10 > 1; as a targetted class
+
+    .li-border {
+    border-bottom: 1px solid black;
+    }
+    
+*********************************************/
+
+
+nav ul li {
+    border-bottom: 5px solid black;
+}
+
+nav ul li a {
+    color: #333333;
+    text-decoration: none;
+} 
+/********************************************
+    Classes:
+    syntax is .user-name {rules}
+    you are NOT to use element names
+    user name must be meaningful AND may include the element name
+    Classes can be attached to any element
+    classes are independant of an element
+    on html page, to use: <element class="username [ username2 ...]}
+
+    types: user (targeted) class
+        psuedo class, these are attached to elements
+
+    Example: anchor tag
+    NOTE: the order in which you code your psuedo classes for the 
+        anchor tag is EXTREMELY IMPORTANT
+
+    a:link      unused link
+    a:visited   used when the anchor tag link has been clicked on previously
+    a:hover     used when your cursor hover over the anchor tag link
+    a:active    used when you are actually clicking the anchor tag link
+*********************************************/
+
+
+
+nav ul li a:visited{
+    color: green;
+}
+
+nav ul li a:hover{
+    color: blue;
+    font-weight: bold;
+    font-size: larger;
+}
+nav ul li a:active{
+    color: red;
+}
+
+ul li {
+    list-style-type: none;
+    padding: 0px;
+}
+
+footer ul li {
+    padding: 10px;
+}
+
+/*
+    A
+*/
