@@ -1,0 +1,129 @@
+body {
+    background: rgba(0, 0, 0, 0.01);
+    font-family: Verdana, sans-serif;
+}
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+    font-size: 100%;
+    line-height: 1.5;
+    background-color: lightgray;
+}
+
+/*CLEAR FIX SOLLUTION*/
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+/**************************************************
+
+Default display of elements on your page is called "stacked"
+
+To get your elements on the same line we use something called flexbox
+To invoke flexbox use the rule::after
+        display: flex;
+
+Flexbox attempts to place all elements within its "immediate specified container" are on the same line
+
+Immediate?? The next level of elements
+
+Flexbox will automatically adjust measurements to get all elements to appear on the same line
+    REGAURDLESS  of the physical width set for the element
+
+Problem I dont want all elements on the same line having their measurements altered
+
+Solution: Alter the default wrapping for flexbox which is none
+
+Rule: flex-wrap: wrap;
+
+This will place as many elements as possible on a single row
+    without adjusting the measurements of your elements,
+Any left over elements will wrap to the following line until
+all elements have been displayed
+
+WARNING: flex-wrap affects a flex display area: Without the display: flex;
+        Rule: flex-wrap is meaningless
+
+        Flexbox will affect positioning that is normal within your page such as 
+        margin collapse
+***************************************************/
+
+main{
+    background-color: lightgray;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*footer{
+    background-color: lightgray;
+    display: flex;
+}*/
+
+/**************************************************
+    Given the classes some hiehgt and width due to the fact that the elements do NOT
+        contain any textural content
+    Set height to a chosen value of 300px
+    Get the width of each box to fit the final given image
+    Margin : 30px
+    padding and border = 0
+    page width is 960
+
+    page-width = (box) + (box) + ... + remainder
+    Our boxes are of equal size
+    page-width = nComulmn * (box) + remainder
+    960 = 2 * (Lm + Lp + Lb + content + Rb + Rb + Rm) + remainder
+    960 = 2 * (30 + 0 + 0 + content + 0 + 0 + 30) + 30
+    960 = 60 + 30 + 2content
+    960 - 90 = 2content
+    870 / 2 = content
+    435 = content
+***************************************************/
+
+.red-paint{
+    height: 300px;
+    width: 435px;
+    background-color: red;
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-bottom: 0px;
+}
+
+.blue-paint{
+    height: 300px;
+    width: 435px;
+    background-color: blue;
+    margin: 30px 0px 0px 30px;
+}
+
+/******************************************************
+page-width = nComulmn * (box) + remainder
+    960 = 1 * (Lm + Lp + Lb + content + Rb + Rb + Rm) + remainder
+    960 = 1 * (30 + 0 + 0 + content + 0 + 0 + 0) + 30
+    960 = 60 + content
+    960 - 60 = content
+    900 = content
+***************************************************/
+.black-paint{
+    height: 50px;
+    width: 900px;
+    background-color: black;
+    margin: 30px 0 30px 30px;
+}
