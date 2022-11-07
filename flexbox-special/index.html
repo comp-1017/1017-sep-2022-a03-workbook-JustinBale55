@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
     <head>
-        <title>on the page title tab</title>
+        <title>2 columns using flexbox</title>
         <meta charset="utf-8">
         <meta name="author" content="Justin Bale">
         <link href="css/reset.css" rel="stylesheet">
@@ -11,14 +11,28 @@
     <body>
         <div class="container">
         <header>
-
+            <h1>Flexbox 2 Column</h1>
         </header>
+        <!-- Display felxbox on main -->
         <main>
+            <!-- Column 1 -->
+            <div class="asidesize red-paint"></div>
+
+            <!-- Column 2 -->
+            <div>
+                <!-- The items in within this div are NOT immediately use main
+                    The items within this div are immediately uder the div
+                    There items are NOT affected by the main flexbox therefor these items are by default "stackec"
+                -->
+                <div class="blue-paint contentsize"></div>
+                <div class="green-paint contentsize"></div>
+            </div>
+            
+
 
         </main>
-        <footer>
 
-        </footer>
+
         </div>
 
     </body>

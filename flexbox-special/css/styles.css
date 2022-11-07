@@ -8,3 +8,86 @@ body {
 	font-size: 100%;
 	line-height: 1.5;
 }
+
+h1{
+	font-weight: bold;
+	font-size: 36px;
+	padding: 10px;
+}
+
+main{
+    background-color: lightgray;
+    display: flex;
+    flex-wrap: wrap;
+	border: 2px solid black;
+}
+
+/* 
+	.flexbox{
+		display: flex;
+	}
+*/
+
+/* 
+	Margin and padding is top right bottom left
+*/
+.asidesize{
+	margin: 10px 0 10px 10px;
+	width: 150px;
+	height: 600px;
+	border: 2px solid black;
+
+}
+/******************************
+Criteria
+margin: 10px between outter edges and boxes (red,blue, and gree)
+margin: 10px between inner boxes (red, green, and blue)
+border of 2px around boxes and main
+
+calculation of width for blue and green, red given as 150px
+
+	960 = column1 + column2 + Right margin/main borders
+	960 = (Lm + Lb + Lp + content + Rp + Rb + Rm) + (Lm + Lb + Lp + content + Rp + Rb + Rm) + 10 + 2 + 2
+	960 = (10 + 2 + 0 + 150 + 0 + 2 + 0) + (10 + 2 + 0 + content + 0 + 2 + 0) + 14
+	960 = 164 + 14 + content + 14
+	960 = 192 + content
+	960 - 192 = content
+	768 = content
+
+The height of the right column items can use a similar 
+	calculation as the horizontal width layout
+The one item you MUST remember is that the vertical margin (VM)
+	between items are collapsed
+The largest VM I use between any two single items 
+
+Aside is 600px
+	600 = 2(Tb + Tp + content + Bp + Bb) + VM
+	600 = 2(2 + 0 + content + 0 + 2) + 10
+	600 = 2 * 4 + 10 + 2 * content
+	600 = 18 + 2*content
+	582 / 2 = content
+	291 = content
+
+This only works because the content area height is the same and 
+	the vertical margin is the same
+
+NORMALLY vertical height is determined by the content of the area.
+******************************/
+.contentsize{
+	margin: 10px 0 10px 10px;
+	width: 768px;
+	border: 2px solid black;
+	height: 293px;
+}
+
+.red-paint{
+	background-color: red;
+}
+
+.blue-paint{
+	background-color: blue;
+}
+
+.green-paint{
+	background-color: green;
+}
