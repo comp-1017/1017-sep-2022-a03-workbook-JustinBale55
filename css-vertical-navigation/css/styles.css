@@ -1,5 +1,6 @@
 body {
 	background-color: white;
+	background-image: url(../img/pattern-bg.gif);
 }
  
 .container {
@@ -9,3 +10,62 @@ body {
 	line-height: 1.5;
 }
 
+header{
+	height: 70px;
+	background-color: #fff;
+	border-bottom: 1px solid #959372;
+}
+
+header h1{
+	display: none;
+}
+
+/*  When you use a class, you can assign the class to any number of element tags in your 
+	html unlike using element selectors which are specific to that selector */
+	
+.hidden{
+	display: none;
+}
+
+header img{
+	margin: 14px;
+}
+
+/*  Style the banner
+	move the banner down by using the margin-top
+	added the backgrou image which had no effect on physical content size
+	adjusted height (content height) to image size
+	added padding (caused problem with image, begining to repeat image
+	adjusted height (content height) to account for the add padding
+*/
+.banner{
+	margin-top: 60px;
+	background-image: url(../img/flower-banner.jpg);
+	height: 420px;   /* This is for the content area NOT the image 480 - 60 = 420 */
+	padding: 60px 0 0 680px;
+}
+
+.banner h2{
+	font-family: 'Alegreya', serif;
+	font-size: 36px;
+	color: #f9ea4f;
+	font-style: italic;
+}
+
+/* Target the anchor link directly to remove the default underline and color */
+.banner a{
+	text-decoration: none;
+	color: #faf9f8;
+	font-size: 18px;
+}
+
+/* :hover pseudo-class adds styles only when the mouse is over the link */
+.banner a:hover{
+	color: #f9ea4f;
+}
+
+/*  Instead of using margin to seperate the li items, you can use the rule line-height
+	Target the li to adding spacing and other styles */
+.banner li{
+	line-height: 40px;
+}
